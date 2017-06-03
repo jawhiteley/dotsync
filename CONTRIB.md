@@ -1,7 +1,7 @@
 Contribute
 ----------
 
-This project would not exist without all of its users and [contributors][1].
+This project would not exist without all of its users and [contributors][1]. _This version was modified by Jonathan Whiteley <<jawhiteley@me.com>>, with many thanks to the main project contributors._
 
 If you have ideas on how to make the configuration easier to maintain or
 improve its performance, do not hesitate to fork and send pull requests.

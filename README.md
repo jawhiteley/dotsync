@@ -1,6 +1,8 @@
 dotsync
 =======
 
+_Modified by Jonathan Whiteley <<jawhiteley@me.com>>. I have kept these modifications in a separate branch to allow easier updates from the original project (this branch can be rebased as necessary)._
+
 dotsync keeps your local dotfiles in sync with a git repository and keeps
 multiple remote machines in sync, either with them pulling from the git
 repo or pushed via rsync
@@ -18,26 +20,47 @@ and if your asked for passwords it will take hours with any number of machines.
 Installation
 ------------
 
-If you already have your dotfiles in a git repo...
+## If you already have your dotfiles in a git repo:
 
     cd ~/.dotfiles
-    git submodule add git@github.com:dotphiles/dotsync.git
-    git submodule --init update
+    git submodule add -b jaw https://jawhiteley/dotsync.git
+    git submodule init 
+    git submodule update
 
-If you dont...
+## If you don't:
+
+Create a [dotphiles repository](https://dotfiles.github.io/) for yourself.
+
+    mkdir ~/.dotfiles
+    cd ~/.dotfiles
+    git init
+
+and follow the steps above.
+
+OR 
 
 Fork the main project on [github](https://github.com/dotphiles/dotphiles)
 
     git clone --recursive git@github.com:*username*/dotphiles.git ~/.dotfiles
 
-Copy your dotfiles into ~/.dotfiles without the dot...
 
-List your dotfiles in dotsyncrc without the dot...
+### populate your new dotfiles repo
+
+Copy your dotfiles into `~/.dotfiles` without the dot...
 
 Checkin your changes...
 
     git commit -a -m "Initial Commit"
     git push
+
+## Set-up dotsync and sync your dotfiles
+
+Make a copy of `dotsync/templates/dotsyncrc` to your dotfiles directory...
+
+List your dotfiles in `dotsyncrc` without the dot...
+
+_To allow dotsync to work locally on any machine, add uncomment the last line (`.local`) in the `[hosts]` section of `dotsyncrc` (see 'Remote Machines' in *Configuration* section below for more info about hosts). This allows dotsync to run (symlink files) on any local machine without having to add that machine's hostname to `dotsyncrc`._
+
 
 Then, symlink your dotfiles into place...
 

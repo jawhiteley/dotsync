@@ -1,10 +1,12 @@
 #
 # dotsync : https://github.com/dotphiles/dotsync
+# dotsync jaw fork : https://github.com/jawhiteley/dotsync/tree/jaw
 #
 # Config for dotsync
 #
 # Authors:
 #   Ben O'Hara <bohara@gmail.com>
+#   Jonathan Whiteley <jawhiteley@me.com>
 #
 
 # Location of your dotfiles in $HOME
@@ -16,7 +18,7 @@
 # dstfile will be '.$srcfile' by default (with path removed)
 #
 [files]
-dotsyncrc
+#dotsyncrc
 #ack/ackrc
 #aptitude
 #bin:bin
