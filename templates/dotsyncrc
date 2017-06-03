@@ -81,5 +81,6 @@ dotsyncrc
 #host7.example.net               rsync=host2.example.com                                #rsync mirror, push from host2
 #host8.example.net               rsync=host2.example.com                                #rsync mirror, push from host2
 #host9.example.net               rsync=host2.example.com                                #rsync mirror, push from host2
+#.local                          git=NONE                       #default: uncomment to allow dotsync to symlink files locally on any machine # jaw
 [endhosts]
 

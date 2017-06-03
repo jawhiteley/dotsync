@@ -41,6 +41,7 @@ UPDATEOPT=""
 ALLOPT=""
 REMOTEDSPATH="$DOTFILES/dotsync/bin"
 REMOTEBACKUPDIR="\$HOME/.backup/${DOTFILES//^\.//}"
+DEFAULTHOST="\.local"   #jaw
 
 # Exit immediately on SIGINT
 trap exit SIGINT
@@ -251,9 +252,9 @@ validhost()
 {
   chkhost=$1
   shrthost=$(echo "$chkhost" | awk -F. '{print $1}')
-  chk="^($shrthost|$chkhost)$"
+  chk="^($shrthost|$chkhost|$DEFAULTHOST)$" # jaw
   if [[ "$DSHOST" ]]; then
-    chk="^($DSHOST|$shrthost|$chkhost)$"
+    chk="^($DSHOST|$shrthost|$chkhost|$DEFAULTHOST)$"   # jaw
   fi
   if [[ "$VERBOSE" == True ]]; then
     echo "*** Checking if $chkhost is valid ***"
