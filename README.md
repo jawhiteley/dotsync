@@ -27,7 +27,13 @@ Installation
     git submodule init 
     git submodule update
 
-## If you don't:
+To update this version of dotsync in the future:
+
+    cd ~/.dotfiles
+    git submodule update --remote
+
+
+## If you do NOT have your dotfiles in a git repo:
 
 Create a [dotphiles repository](https://dotfiles.github.io/) for yourself.
 
